@@ -2,7 +2,7 @@
 	"name": "jtdd",
 	"version": "1.0.0",
 	"description": "",
-	"main": "sum.js",
+	"main": "hlj.js",
 	"type": "module",
 	"dependencies": {
 		"child_process": "^1.0.2"

@@ -9,15 +9,15 @@ const exec = (cmd) => {
 
 describe("JavaScript TDD framework", () => {
 	it("is a CLI program", () => {
-		const stdout = exec("jtdd sum.test.js");
+		const stdout = exec("hlj sum.test.js");
 		expect(stdout).toBe("PASS\n");
 	});
 	it("should return PASS when test passed", () => {
-		const stdout = exec("jtdd sum.test.js");
+		const stdout = exec("hlj sum.test.js");
 		expect(stdout).toBe("PASS\n");
 	});
 	it("should return ERROR when test failed", () => {
-		const stdout = exec("jtdd failed.test.js");
+		const stdout = exec("hlj failed.test.js");
 		expect(stdout).toBe("ERROR\n");
 	});
 });
