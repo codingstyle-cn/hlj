@@ -1,18 +1,20 @@
 {
-  "name": "jtdd",
-  "version": "1.0.0",
-  "description": "",
-  "main": "sum.js",
-  "dependencies": {
-    "child_process": "^1.0.2"
-  },
-  "devDependencies": {
-    "jest": "^26.6.3"
-  },
-  "scripts": {
-    "test": "jest test/"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+	"name": "jtdd",
+	"version": "1.0.0",
+	"description": "",
+	"main": "sum.js",
+	"type": "module",
+	"dependencies": {
+		"child_process": "^1.0.2"
+	},
+	"devDependencies": {
+		"@babel/preset-env": "^7.13.10",
+		"jest": "^26.6.3"
+	},
+	"scripts": {
+		"test": "jest test/"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC"
 }
