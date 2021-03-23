@@ -1,5 +1,6 @@
 ## hlj - 红领巾
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/146dbc7bdad04887821e53eac0e296ba)](https://app.codacy.com/gh/codingstyle-cn/hlj?utm_source=github.com&utm_medium=referral&utm_content=codingstyle-cn/hlj&utm_campaign=Badge_Grade_Settings)
 [![CI](https://github.com/codingstyle-cn/hlj/actions/workflows/node.js.yml/badge.svg)](https://github.com/codingstyle-cn/hlj/actions/workflows/node.js.yml)
 
 ![红领巾](https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1171776514,2459144423&fm=26&gp=0.jpg)
