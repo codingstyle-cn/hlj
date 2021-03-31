@@ -7,7 +7,8 @@
     "child_process": "^1.0.2"
   },
   "scripts": {
-    "test": "node src/hlj.js test"
+    "test": "node src/hlj.js test",
+    "cli": "node src/cli.js test"
   },
   "repository": {
     "type": "git",
@@ -24,7 +25,7 @@
     "JavaScript unit test"
   ],
   "bin": {
-    "hlj": "./src/hlj.js"
+    "hlj": "./src/cli.js"
   },
   "author": "CodingStyle.cn",
   "license": "MIT"
