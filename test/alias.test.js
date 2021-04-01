@@ -14,7 +14,7 @@ describe('Keyword', () => {
   it('should run it as test', function () {
     const stdout = exec(`hlj ${FIXTURE}/it.test.js`);
     expect(stdout).toContain('PASS');
-    expect(stdout).toContain(`Tests: ${green('1 passed')}, 1 total`);
+    expect(stdout).toContain(`Tests: ${green('replace passed')}, 1 total`);
   });
 
   it('should organize test cases with describe', () => {
