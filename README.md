@@ -23,6 +23,8 @@ The fastest TDD for JavaScript world, made by Chinese software craftsman.
 - describe
 - test
 - it
+- beforeEach/AfterEach
+- beforeAll/afterAll
 
 **Matchers**
 
@@ -34,6 +36,12 @@ The fastest TDD for JavaScript world, made by Chinese software craftsman.
 - not.toEqual
 - not.toContain
 - not.toMatch
+
+**Watch Mode**
+Usage:
+
+- a - run all tests
+- q - quit
 
 ### To Contribute
 
