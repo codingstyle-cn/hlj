@@ -10,6 +10,7 @@ const { bold } = require('./report/render');
 
 const handleCommand = (key, fileName) => {
   if (key === 'q') process.exit();
+  flushScreen();
   if (key === 'a') {
     main(workingDir, argParser.getPath(), testCaseName, argParser.verbose());
   }
@@ -65,7 +66,7 @@ const testReport = main(
 );
 
 const flushScreen = () => {
-  console.log('\x1Bc');
+  process.stdout.write('\x1B[2J\x1B[3J\x1B[H\x1Bc');
 };
 
 if (argParser.watchMode()) {
@@ -74,7 +75,6 @@ if (argParser.watchMode()) {
   g.next();
 
   fs.watch(workingDir, { recursive: true }, (eventType, fileName) => {
-    flushScreen();
     const walker = new Walker();
     const isTestFile = walker.isTestFile(fileName);
 
@@ -86,7 +86,6 @@ if (argParser.watchMode()) {
   stdin.resume();
 
   stdin.on('data', function (data) {
-    flushScreen();
     const key = data.toString().trim();
     g.next({ key });
   });
