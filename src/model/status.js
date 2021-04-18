@@ -47,6 +47,10 @@ class Status {
     return this.totalCount;
   }
 
+  increaseTotalCount() {
+    this.totalCount++;
+  }
+
   passed(count) {
     this.passedCount = count;
   }

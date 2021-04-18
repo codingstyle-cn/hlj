@@ -139,12 +139,14 @@ class Context {
   test(name, callback) {
     const testCase = new TestCase(this.context.testSuite, name, callback);
     this.appendToParent(testCase);
+    this.context.testSuite.getStatus().increaseTotalCount();
     return testCase;
   }
 
   skip(name) {
     const testCase = new TestCase(this.context.testSuite, name);
     this.appendToParent(testCase);
+    this.context.testSuite.getStatus().increaseTotalCount();
   }
 
   appendToParent(child) {

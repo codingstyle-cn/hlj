@@ -13,12 +13,7 @@ class TestSuite {
   }
 
   getTotalCount() {
-    return this.children.reduce((count, child) => {
-      if (!child.children) {
-        return count + 1;
-      }
-      return count + child.getTotalCount();
-    }, 0);
+    return this.status.getTotalCount();
   }
 
   getPath() {
