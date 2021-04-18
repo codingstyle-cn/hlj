@@ -47,6 +47,7 @@ class TestSuite {
       child.execute(testCaseName);
       this.afterEach && this.afterEach();
     });
+    this.afterAll && this.afterAll();
     this.updateStatus();
   }
 
