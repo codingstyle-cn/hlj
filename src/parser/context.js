@@ -9,6 +9,7 @@ class Context {
   constructor(path) {
     this.path = path.substr(0, path.lastIndexOf(sep));
   }
+
   create() {
     const tempChildren = [];
     const testSuite = new TestSuite('', tempChildren);

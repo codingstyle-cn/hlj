@@ -6,13 +6,6 @@ class TestReport {
     this.status = new Status();
   }
 
-  addTestCase(testCase) {
-    this.testSuites[this.testSuites.length - 1].addTestCase(testCase);
-  }
-  addDescription(description) {
-    this.testSuites[this.testSuites.length - 1].addDescription(description);
-  }
-
   addTestSuite(testSuite) {
     this.testSuites.push(testSuite);
   }
