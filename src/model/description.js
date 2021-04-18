@@ -6,15 +6,6 @@ class Description {
     this.onlyRun = false;
   }
 
-  getTotalTestCases() {
-    return this.children.reduce((count, child) => {
-      if (!child.children) {
-        return count + 1;
-      }
-      return count + child.getTotalTestCases();
-    }, 0);
-  }
-
   skip() {
     this.children.forEach((child) => {
       child.skip();
@@ -87,12 +78,6 @@ class Description {
   getPassedCount() {
     return this.children
       .map((child) => child.getPassedCount())
-      .reduce((a, b) => a + b, 0);
-  }
-
-  getTotalCount() {
-    return this.children
-      .map((child) => child.getTotalCount())
       .reduce((a, b) => a + b, 0);
   }
 

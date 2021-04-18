@@ -99,10 +99,6 @@ class TestCase {
     return this.status.isSkipped() ? 1 : 0;
   }
 
-  getTotalCount() {
-    return 1;
-  }
-
   getExpected() {
     return this.expected;
   }

@@ -29,12 +29,6 @@ class TestReport {
     return this.testSuites.filter((suite) => suite.isPassed()).length;
   }
 
-  getTotalTestCases() {
-    return this.testSuites.reduce((count, testSuite) => {
-      return count + testSuite.getTotalTestCases();
-    }, 0);
-  }
-
   getSuite(index) {
     return this.testSuites[index];
   }
