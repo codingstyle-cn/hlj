@@ -8,10 +8,6 @@ class TestSuite {
     this.children = children;
   }
 
-  setStatus(status) {
-    this.status = status;
-  }
-
   getTotalCount() {
     return this.status.getTotalCount();
   }

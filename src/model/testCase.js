@@ -83,10 +83,6 @@ class TestCase {
     return this.status.isSkipped();
   }
 
-  getStatus() {
-    return this.status;
-  }
-
   getFailedCount() {
     return this.status.isFailed() ? 1 : 0;
   }

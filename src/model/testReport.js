@@ -66,10 +66,6 @@ class TestReport {
   isPassed() {
     return this.status.isPassed();
   }
-
-  getStatus() {
-    return this.status;
-  }
 }
 
 module.exports = TestReport;
