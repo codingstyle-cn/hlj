@@ -32,6 +32,27 @@ describe('Arg Parser', () => {
     });
   });
 
+  describe('--coverage', () => {
+    it('should be false when not provided', () => {
+      const args = ['/usr/local/bin/node', '/usr/local/bin/hlj', 'fixture'];
+      const argParser = new ArgParser(args);
+      expect(argParser.getPath()).toEqual('fixture');
+      expect(argParser.coverage()).toEqual(false);
+    });
+
+    it('should be true when provided', () => {
+      const args = [
+        '/usr/local/bin/node',
+        '/usr/local/bin/hlj',
+        'fixture',
+        '--coverage',
+      ];
+      const argParser = new ArgParser(args);
+      expect(argParser.getPath()).toEqual('fixture');
+      expect(argParser.coverage()).toEqual(true);
+    });
+  });
+
   describe('vim-test', () => {
     it('parse args of TestFile', () => {
       const args = [

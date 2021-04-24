@@ -26,6 +26,10 @@ class ArgParser {
   watchMode() {
     return this.args.includes('--watch');
   }
+
+  coverage() {
+    return this.args.includes('--coverage');
+  }
 }
 
 module.exports = ArgParser;
