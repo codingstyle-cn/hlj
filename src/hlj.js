@@ -69,16 +69,32 @@ const flushScreen = () => {
   process.stdout.write('\x1B[2J\x1B[3J\x1B[H\x1Bc');
 };
 
+const isJavaScriptFile = (fileName) => {
+  return fileName.endsWith('.js');
+};
+
 if (argParser.watchMode()) {
   printUsage();
   const g = gen();
   g.next();
 
+  let isRunning = false;
   fs.watch(workingDir, { recursive: true }, (eventType, fileName) => {
+    if (isRunning) {
+      console.log('Running, skipped');
+      return;
+    }
+    isRunning = true;
+
     const walker = new Walker();
     const isTestFile = walker.isTestFile(fileName);
+    if (!isTestFile && !isJavaScriptFile(fileName)) {
+      isRunning = false;
+      return;
+    }
 
     isTestFile ? g.next({ key: 'o', fileName }) : g.next({ key: 'a' });
+    isRunning = false;
   });
 
   const stdin = process.stdin;
