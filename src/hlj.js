@@ -33,7 +33,7 @@ function* gen() {
   }
 }
 
-const main = (workingDir, fileName, testCaseName, verbose) => {
+const main = (workingDir, fileName, testCaseName, verbose, coverage) => {
   const fullPath = workingDir + fileName;
   const walker = new Walker();
 
@@ -46,7 +46,12 @@ const main = (workingDir, fileName, testCaseName, verbose) => {
 
   testReport.execute(testCaseName);
 
-  const consoleReport = new ConsoleReporter(workingDir, testReport, verbose);
+  const consoleReport = new ConsoleReporter(
+    workingDir,
+    testReport,
+    verbose,
+    coverage
+  );
 
   const result = consoleReport.render();
   console.log(result);
@@ -62,7 +67,8 @@ const testReport = main(
   workingDir,
   argParser.getPath(),
   testCaseName,
-  argParser.verbose()
+  argParser.verbose(),
+  argParser.coverage()
 );
 
 const flushScreen = () => {

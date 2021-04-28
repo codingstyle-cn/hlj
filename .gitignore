@@ -121,3 +121,4 @@ dist
 tags
 
 .DS_Store
+!test/coverage
