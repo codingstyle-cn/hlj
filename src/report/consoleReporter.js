@@ -28,7 +28,9 @@ class ConsoleReporter {
   }
 
   coverage() {
-    const allStatements = 99;
+    const coveredLines = 10;
+    const totalLines = 10;
+    const allStatements = coveredLines / totalLines;
     return `----------|---------|----------|---------|---------|-------------------
 File      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
 ----------|---------|----------|---------|---------|-------------------

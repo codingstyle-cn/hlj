@@ -42,7 +42,7 @@ const main = (workingDir, fileName, testCaseName, verbose, coverage) => {
   }
 
   const files = walker.walk(fullPath);
-  const testReport = new Parser().parse(files);
+  const testReport = new Parser(coverage).parse(files);
 
   testReport.execute(testCaseName);
 

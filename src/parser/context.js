@@ -46,7 +46,8 @@ class Context {
         this.afterAll(callback);
       },
       require: (name) => {
-        return require(this.path + sep + name);
+        if (name.startsWith('.')) return require(this.path + sep + name);
+        return require(name);
       },
       expect,
       process,
